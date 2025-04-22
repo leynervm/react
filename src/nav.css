@@ -1,0 +1,44 @@
+@import 'tailwindcss';
+
+.link-navigation {
+    @apply flex flex-col justify-center items-center p-5 rounded-2xl ring-1 max-w-28 text-[#00d8ff] text-sm leading-none;
+}
+
+.link-navigation-aprendizaje svg,
+.link-navigation svg {
+    @apply size-8 text-[#00d8ff];
+}
+
+.link-navigation:hover,
+.link-navigation-aprendizaje:hover {
+    @apply bg-[#00d8ff] text-white;
+}
+
+.link-navigation:hover>span,
+.link-navigation:hover>svg,
+.link-navigation-aprendizaje:hover>span,
+.link-navigation-aprendizaje:hover>svg {
+    @apply text-white;
+}
+
+.link-navigation.active,
+.link-navigation-aprendizaje.active {
+    @apply bg-[#00d8ff] text-white;
+}
+
+.link-navigation.active svg,
+.link-navigation-aprendizaje.active svg {
+    @apply text-white;
+}
+
+.link-navigation-aprendizaje {
+    @apply flex justify-center items-center gap-2 p-2.5 border border-[#00d8ff] rounded-xl ring-0 overflow-hidden text-[#00d8ff] text-sm;
+}
+
+.link-navigation-aprendizaje svg {
+    @apply size-6;
+}
+
+.link-navigation-aprendizaje span {
+    /* @apply text-[#00d8ff]; */
+}
