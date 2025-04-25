@@ -11,7 +11,7 @@
 
 .link-navigation:hover,
 .link-navigation-aprendizaje:hover {
-    @apply bg-[#00d8ff] text-white;
+    @apply bg-[#00d8ff] border-[#00d8ff] text-white;
 }
 
 .link-navigation:hover>span,
@@ -32,11 +32,11 @@
 }
 
 .link-navigation-aprendizaje {
-    @apply flex justify-center items-center gap-2 p-2.5 border border-[#00d8ff] rounded-xl ring-0 overflow-hidden text-[#00d8ff] text-sm;
+    @apply flex justify-center items-center gap-2 p-2.5 border border-[#00d8ff] rounded-xl focus:!outline-0 ring-0 focus:!ring-0 overflow-hidden text-[#00d8ff] text-sm;
 }
 
 .link-navigation-aprendizaje svg {
-    @apply size-6;
+    @apply size-6 text-current;
 }
 
 .link-navigation-aprendizaje span {

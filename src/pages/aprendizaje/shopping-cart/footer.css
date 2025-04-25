@@ -8,6 +8,8 @@
     border-radius: 32px;
     opacity: .95;
     backdrop-filter: blur(8px);
+    max-height: 160px;
+    overflow-y: auto;
 }
 
 .footer span {

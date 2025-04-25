@@ -2,7 +2,7 @@ import { useCart } from "../../../hooks/useCart"
 
 const Products = ({ products }) => {
 
-    const { cart, addToCart } = useCart()
+    const { cart, addToCart, removeFromCart } = useCart()
 
     const checkProductIncart = (product) => {
         return cart.some(item => item.id === product.id)
@@ -30,7 +30,14 @@ const Products = ({ products }) => {
                                     {product.category}</p>
                             </div>
                             <div>
-                                <button onClick={() => addToCart(product)} className="block w-full !text-xs link-navigation-aprendizaje">
+                                <button
+                                    onClick={() => {
+                                        isProductInCart ?
+                                            removeFromCart(product) :
+                                            addToCart(product)
+                                    }}
+                                    style={isProductInCart ? { background: 'red', color: 'white', borderColor: 'red' } : {}}
+                                    className="block w-full !text-xs link-navigation-aprendizaje">
 
                                     {
                                         isProductInCart ? 'QUITAR' : 'AGREGAR'
@@ -40,9 +47,10 @@ const Products = ({ products }) => {
                                         stroke="currentColor"
                                         strokeLinecap="round"
                                         strokeWidth="2"
-                                        className="block size-5">
+                                        className="block size-5 text-current">
                                         <path d="m8 16l8.72-.727c2.729-.227 3.341-.823 3.643-3.544L21 6M6 6h.5M22 6h-2.5m-10 0h7M13 9.5v-7" />
-                                        <circle cx="6" cy="20" r="2" /><circle cx="17" cy="20" r="2" />
+                                        <circle cx="6" cy="20" r="2" />
+                                        <circle cx="17" cy="20" r="2" />
                                         <path d="M8 20h7M2 2h.966c.945 0 1.768.625 1.997 1.515L7.94 15.076a1.96 1.96 0 0 1-.35 1.686L6.631 18" />
                                     </svg>
                                 </button>
@@ -51,7 +59,7 @@ const Products = ({ products }) => {
                     )
                 })
             }
-        </div>
+        </div >
     )
 }
 
