@@ -1,5 +1,5 @@
 import './index.css'
-import { TwitterFollowCard } from './TwitterFollowcard'
+import TwitterFollowCard from './TwitterFollowcard'
 
 const users = [
     {
@@ -24,7 +24,7 @@ const users = [
     }
 ]
 
-export default function List() {
+export default function ListSeguidores() {
     const formatUserName = (username) => `email@${username}`
     // const formatedUserName = <span>@Leynervm</span>
 

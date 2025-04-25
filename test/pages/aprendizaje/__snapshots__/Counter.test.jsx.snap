@@ -1,0 +1,40 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`TEST COUNTER EN COMPONENT en <Counter /> > debe de hacer match con el snapshoot 1`] = `
+<div>
+  <div>
+    <div>
+      MAX
+      <span />
+    </div>
+    <h1
+      data-testid="test-counter"
+    />
+    <div
+      class="flex justify-center gap-1 mt-6 w-full"
+    >
+      <button
+        aria-label="btn-disminuir"
+        class="link-navigation-aprendizaje"
+        type="button"
+      >
+        Disminuir
+      </button>
+      <button
+        aria-label="btn-incrementar"
+        class="link-navigation-aprendizaje"
+        type="button"
+      >
+        Incrementar
+      </button>
+      <button
+        aria-label="btn-reset"
+        class="bg-red-500 !border-red-500 !ring-red-500 !text-white link-navigation-aprendizaje"
+        type="button"
+      >
+        Resetear
+      </button>
+    </div>
+  </div>
+</div>
+`;

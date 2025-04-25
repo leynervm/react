@@ -1,6 +1,6 @@
 import { NavLink } from "react-router";
 
-const MyFirstPage = () => {
+const DinamicRoute = () => {
 
     const orders = [
         {
@@ -55,7 +55,7 @@ const MyFirstPage = () => {
                                 <tr className="" key={order.id}>
                                     <td className="sm:px-3 py-4 text-gray-600 text-sm text-center whitespace-no-wrap">
                                         <p>{order.name}</p>
-                                        <NavLink to={`/aprendizaje/orders/${order.id}`} className="group inline-block hover:bg-[#00d8ff] p-2 border border-[#00d8ff] rounded-lg text-[#00d8ff] transition-colors duration-300">
+                                        <NavLink to={`${order.id}`} className="group inline-block hover:bg-[#00d8ff] p-2 border border-[#00d8ff] rounded-lg text-[#00d8ff] transition-colors duration-300">
                                             <span className="text-[#00d8ff] group-hover:text-white">Ver detalles</span>
                                         </NavLink>
 
@@ -68,14 +68,14 @@ const MyFirstPage = () => {
                                         <span className="bg-blue-200 p-1 px-2 rounded-lg font-semibold text-blue-500 text-xs">{order.status}</span>
                                     </td>
                                 </tr>
-                            ))
+                    ))
                         }
 
-                    </tbody>
-                </table>
-            </div>
+                </tbody>
+            </table>
         </div>
+        </div >
     );
 };
 
-export default MyFirstPage;
+export default DinamicRoute;
